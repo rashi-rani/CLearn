@@ -3,10 +3,10 @@
 #include<stdio.h>
 int main(){
     char str[100],upper_str[100],lower_str[100];
-    int num,i=0,j=0,k=0,l=0;
+    int num,i=0,j=0;
     printf("Press 1 for changing lower string to UPPER string and 2 for changing UPPER string to lower string\n");
     scanf("%d",&num);
-    if (num!=1 && num!=0){
+    if (num!=1 && num!=2){
     printf("You entered the wrong number!\n");
     return 0;
     }
@@ -26,12 +26,12 @@ int main(){
       puts(upper_str);
     }  
     else  {
-        while(str[k]!='\0'){
-        if(str[k]>='A' && str[k]<='Z')
-        lower_str[l]=str[k]+32;
+        while(str[i]!='\0'){
+        if(str[i]>='A' && str[i]<='Z')
+        lower_str[j]=str[i]+32;
         else
-        lower_str[l]=str[k];
-        k++,l++;
+        lower_str[j]=str[i];
+        i++,j++;
         }
       lower_str[j]='\0';
       printf("\n The string converted into lower case is : ");
