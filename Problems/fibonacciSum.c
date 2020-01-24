@@ -3,3 +3,37 @@
 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 
 By considering the terms in the Fibonacci sequence whose values do not exceed 5000, find the sum of the even-valued terms. */
+
+#include<stdio.h>
+int fibonacci(int n);
+int main(){
+    int i,series,sum=0;
+    for(i=0; ;i++){
+        series=fibonacci(i);
+        if (series<5000){
+        if(series%2==0)
+            sum=sum+series;
+        else
+            sum;
+        }
+        else
+        {
+         break;
+        }
+        
+    }
+    printf("The sum of even valued function of the fibonacci series is %d\n",sum);
+    return 0;
+}
+int fibonacci(int n){
+    if (n==0){
+        return 0;
+    }
+    else if (n==1){
+        return 1;
+    }
+    else{
+        return (fibonacci(n-1)+fibonacci(n-2));
+    }
+    
+}
